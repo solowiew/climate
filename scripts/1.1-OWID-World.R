@@ -4,7 +4,7 @@ library(tidyverse)
 library(ggplot2)
 library(gridExtra)
 library(ggthemes)
-setwd("C:/Users/Home/Desktop/workdir") # set your own working directory
+# set your own working directory
 
 # Load data
 owid_data <- read_csv("https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-data.csv")
@@ -36,8 +36,8 @@ g1 <- ggplot(world_data, aes(x=year, y=as.numeric(cumulative_co2)/1000, group = 
         axis.title.y = element_text(size=9, colour = "#272928", vjust=2),
         plot.tag = element_text(colour = "#272928", vjust = 2),
         plot.margin=unit(c(0.25,0.5,0.25,0.25),"cm"))+
-  labs(tag = "(а)")+
-  ylab("Суммарные выбросы CO2, Гт.")+
+  labs(tag = "(a)")+
+  ylab("Cumulative Emissions, CO2 Gt.")+
   scale_x_discrete(breaks = c(1750, 1810, 1865, 1920, 1970, 2020), limits = factor(c(1750:2020)))
 
 # Cumulative carbon dioxide emissions (semilog scale)
@@ -51,11 +51,10 @@ g2 <- ggplot(world_data, aes(x=year, y=as.numeric(cumulative_co2)/1000, group = 
   theme_tufte()+
   geom_rangeframe()+
   theme(axis.title.x = element_blank(),
-        axis.title.y = element_text(size=9, colour = "#272928", vjust=2),
+        axis.title.y = element_blank(),
         plot.tag = element_text(colour = "#272928", vjust = 2),
         plot.margin=unit(c(0.25,0.5,0.25,0.25),"cm"))+
-  labs(tag = "(б)")+
-  ylab("Суммарные выбросы CO2, Гт.")+
+  labs(tag = "(b)")+
   scale_x_discrete(breaks = c(1750, 1810, 1865, 1920, 1970, 2020), limits = factor(c(1750:2020)))+
   scale_y_log10(breaks = c(0.1, 1, 10, 100))
 
@@ -74,8 +73,8 @@ g3 <- ggplot(world_data, aes(x=year, y=as.numeric(co2)/1000, group = 1))+
         axis.title.y = element_text(size=9, colour = "#272928", vjust=2),
         plot.tag = element_text(colour = "#272928", vjust = 2),
         plot.margin=unit(c(0.25,0.5,0.25,0.25),"cm"))+
-  labs(tag = "(в)")+
-  ylab("Годовые выбросы CO2, Гт.")+
+  labs(tag = "(c)")+
+  ylab("Yearly Emissions, CO2 Gt.")+
   scale_x_discrete(breaks = c(1750, 1810, 1865, 1920, 1970, 2020), limits = factor(c(1750:2020)))
 
 # Annual carbon dioxide emissions (semilog scale)
@@ -89,11 +88,10 @@ g4 <- ggplot(world_data, aes(x=year, y=as.numeric(co2)/1000, group = 1))+
   theme_tufte()+
   geom_rangeframe()+
   theme(axis.title.x = element_blank(),
-        axis.title.y = element_text(size=9, colour = "#272928", vjust=2),
+        axis.title.y = element_blank(),
         plot.tag = element_text(colour = "#272928", vjust = 2),
         plot.margin=unit(c(0.25,0.5,0.25,0.25),"cm"))+
-  labs(tag = "(г)")+
-  ylab("Годовые выбросы CO2, Гт.")+
+  labs(tag = "(d)")+
   scale_x_discrete(breaks = c(1750, 1810, 1865, 1920, 1970, 2020), limits = factor(c(1750:2020)))+
   scale_y_log10(breaks = c(0.1, 1, 10, 100))
 
