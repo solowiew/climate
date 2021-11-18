@@ -1,3 +1,6 @@
-# Trade & CLimate Change
-Global Carbon Dioxide Emissions
-# <p align="center"> ![Rplot](https://user-images.githubusercontent.com/72515807/142370620-fd0dbf57-0adb-42d3-82fa-465d1b6d333c.png) </p>
+# Trade & Climate Change
+<p align="center">Figure 1 – Global Carbon Dioxide Emissions, 1750 – 2020.<br/>Plotted on linear (a, c) and semilog (b, d) scales. Data from Ritchie, Roser (2020).</p>
+
+# <p align="center"> ![Figure1](https://user-images.githubusercontent.com/72515807/142462740-5219eba5-fea0-4751-a206-fa9a901fd12f.png)</p>
+
+
